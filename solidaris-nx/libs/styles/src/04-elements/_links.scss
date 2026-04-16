@@ -1,0 +1,15 @@
+// This file contains styles for links, following the BEMIT naming convention and integrating with the Plectrum design system.
+
+.link {
+  color: $link-color;
+  text-decoration: none;
+
+  &--hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &--visited {
+    color: $link-visited-color;
+  }
+}

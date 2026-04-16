@@ -1,0 +1,46 @@
+{
+  "name": "storybook",
+  "root": "storybook",
+  "sourceRoot": "storybook/src",
+  "projectType": "library",
+  "architect": {
+    "build": {
+      "builder": "@nrwl/web:build",
+      "options": {
+        "outputPath": "dist/storybook",
+        "index": "storybook/src/index.html",
+        "main": "storybook/.storybook/main.ts",
+        "polyfills": "storybook/src/polyfills.ts",
+        "tsConfig": "storybook/tsconfig.app.json",
+        "assets": ["storybook/src/favicon.ico", "storybook/src/assets"],
+        "styles": ["libs/styles/src/main.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "aot": true,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true
+        }
+      }
+    },
+    "serve": {
+      "builder": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "storybook:build"
+      }
+    },
+    "test": {
+      "builder": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "storybook/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

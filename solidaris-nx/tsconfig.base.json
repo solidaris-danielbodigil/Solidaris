@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "rootDir": ".",
+    "composite": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "lib": ["es2018", "dom"],
+    "types": [],
+    "paths": {
+      "@solidaris/plectrum": ["libs/plectrum/src/index.ts"],
+      "@solidaris/ui": ["libs/ui/src/index.ts"],
+      "@solidaris/styles": ["libs/styles/src/main.scss"]
+    }
+  },
+  "include": [
+    "apps/**/*",
+    "libs/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

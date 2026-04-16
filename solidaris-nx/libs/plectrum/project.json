@@ -1,0 +1,29 @@
+{
+  "name": "plectrum",
+  "sourceRoot": "libs/plectrum/src",
+  "projectType": "library",
+  "architect": {
+    "build": {
+      "builder": "@nrwl/angular:package",
+      "options": {
+        "outputPath": "dist/libs/plectrum",
+        "tsConfig": "libs/plectrum/tsconfig.lib.json",
+        "packageJson": "libs/plectrum/package.json",
+        "assets": [
+          {
+            "input": "libs/plectrum/src/lib/tokens",
+            "glob": "**/*",
+            "output": "./tokens"
+          }
+        ]
+      }
+    },
+    "test": {
+      "builder": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/plectrum/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

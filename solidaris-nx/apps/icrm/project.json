@@ -1,0 +1,75 @@
+{
+  "name": "icrm",
+  "root": "apps/icrm",
+  "sourceRoot": "apps/icrm/src",
+  "projectType": "application",
+  "architect": {
+    "build": {
+      "builder": "@nrwl/angular:browser",
+      "options": {
+        "outputPath": "dist/apps/icrm",
+        "index": "apps/icrm/src/index.html",
+        "main": "apps/icrm/src/main.ts",
+        "polyfills": "apps/icrm/src/polyfills.ts",
+        "tsConfig": "apps/icrm/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/icrm/src/assets",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "libs/styles/src/main.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/icrm/src/environments/environment.ts",
+              "with": "apps/icrm/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "aot": true,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true
+        }
+      }
+    },
+    "serve": {
+      "builder": "@nrwl/angular:dev-server",
+      "options": {
+        "browserTarget": "icrm:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "icrm:build:production"
+        }
+      }
+    },
+    "test": {
+      "builder": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/icrm/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "builder": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/icrm/**/*.ts",
+          "apps/icrm/**/*.html"
+        ]
+      }
+    }
+  }
+}

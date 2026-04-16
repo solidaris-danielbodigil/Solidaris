@@ -1,0 +1,61 @@
+// Typography styles for the application, following the BEMIT naming convention and integrating Plectrum design tokens.
+
+$font-stack: 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+body {
+    font-family: $font-stack;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-stack;
+    font-weight: bold;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: $primary-color; // Assuming $primary-color is defined in _colors.scss
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

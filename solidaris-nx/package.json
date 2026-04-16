@@ -1,0 +1,29 @@
+{
+  "name": "solidaris-nx",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "dependencies": {
+    "@angular/core": "^latest",
+    "@angular/common": "^latest",
+    "@angular/router": "^latest",
+    "primeng": "^latest",
+    "rxjs": "~7.0.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^latest",
+    "@angular/compiler-cli": "^latest",
+    "@storybook/angular": "^latest",
+    "typescript": "~4.3.5",
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2"
+  }
+}

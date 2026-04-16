@@ -1,0 +1,24 @@
+/* 
+  This file contains the SCSS styles for the AppComponent of the iCRM application, 
+  following the BEMIT naming convention. 
+*/
+
+/* Example styles following BEMIT convention */
+.app {
+  &__header {
+    background-color: $primary-color;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  &__footer {
+    background-color: $secondary-color;
+    padding: 1rem;
+    text-align: center;
+  }
+}
