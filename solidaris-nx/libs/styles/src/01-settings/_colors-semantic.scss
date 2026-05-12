@@ -1,0 +1,164 @@
+// =============================================================================
+// 01-settings/_semantic-colors.scss
+// Plectrum semantic color tokens — maps primitives to roles.
+// Sources:
+//   • Figma Foundations — jH0paYnBCco2Ye6ysNcWrr  (Color → functional, brand, accent, background groups)
+//   • libs/plectrum/src/Plectrum_v0.6/base.ts       (semantic.colorScheme.light)
+//   • libs/plectrum/src/Plectrum_v0.6/extend.ts     (emutnav, surface.75, primary.75, etc.)
+//
+// DEPENDS ON: _primitive-colors.scss (must be imported first)
+//
+// RULES:
+//   - Use these tokens in all component SCSS — never reference primitive
+//     --color-{palette}-{shade} tokens directly from components.
+//   - At runtime, PrimeNG emits its own --p-* props via providePlectrum().
+//     These tokens are the Solidaris SCSS layer on top.
+//   - Primitives live in _primitive-colors.scss. Never redeclare hex values here.
+// =============================================================================
+
+:root {
+
+  // ===========================================================================
+  // BRAND  (Figma: Color → brand)
+  // ===========================================================================
+  --color-brand:         var(--color-primary-500);
+  --color-brand-hover:   var(--color-primary-700);
+  --color-brand-active:  var(--color-primary-800);
+  --color-brand-subtle:  var(--color-primary-75);
+
+  // ===========================================================================
+  // FEEDBACK  (Figma: Color → functional)
+  // ===========================================================================
+  --color-success:         var(--color-green-500);
+  --color-success-subtle:  var(--color-green-75);
+
+  --color-warning:         var(--color-orange-500);
+  --color-warning-subtle:  var(--color-orange-75);
+
+  --color-danger:          var(--color-red-500);
+  --color-danger-subtle:   var(--color-red-75);
+  --color-error:           var(--color-red-500);
+
+  --color-info:            var(--color-blue-500);
+  --color-info-subtle:     var(--color-blue-75);
+
+  // ===========================================================================
+  // SURFACE SCALE  (base.ts: semantic.colorScheme.light.surface — gray palette)
+  // extend.ts: surface.75 = #EDEDED
+  // ===========================================================================
+  --color-surface-0:    var(--color-gray-0);    // #ffffff
+  --color-surface-50:   var(--color-gray-50);   // #f9f9f9
+  --color-surface-75:   var(--color-gray-75);   // #EDEDED
+  --color-surface-100:  var(--color-gray-100);  // #e0e0e0
+  --color-surface-200:  var(--color-gray-200);
+  --color-surface-300:  var(--color-gray-300);
+  --color-surface-400:  var(--color-gray-400);
+  --color-surface-500:  var(--color-gray-500);
+  --color-surface-600:  var(--color-gray-600);
+  --color-surface-700:  var(--color-gray-700);
+  --color-surface-800:  var(--color-gray-800);
+  --color-surface-900:  var(--color-gray-900);
+  --color-surface-950:  var(--color-gray-950);
+
+  // Surface role aliases  (Figma: Color → background)
+  --color-surface:         var(--color-surface-0);
+  --color-surface-subtle:  var(--color-surface-50);
+  --color-surface-muted:   var(--color-surface-75);
+  --color-surface-border:  var(--color-surface-100);
+
+  // ===========================================================================
+  // TEXT  (base.ts: semantic.colorScheme.light.text)
+  // ===========================================================================
+  --color-text:             var(--color-surface-900);  // {surface.900}
+  --color-text-hover:       var(--color-surface-950);  // {surface.950}
+  --color-text-muted:       var(--color-surface-600);  // {surface.600}
+  --color-text-muted-hover: var(--color-surface-600);  // {surface.600}
+  --color-text-inverse:     var(--color-surface-0);
+
+  // ===========================================================================
+  // HIGHLIGHT  (base.ts: semantic.colorScheme.light.highlight)
+  // ===========================================================================
+  --color-highlight:             var(--color-primary-75);   // {primary.75}
+  --color-highlight-focus:       var(--color-primary-100);  // {primary.100}
+  --color-highlight-text:        var(--color-text);
+  --color-highlight-focus-text:  var(--color-text);
+
+  // ===========================================================================
+  // FOCUS
+  // ===========================================================================
+  --color-focus:  var(--color-blue-300);
+
+  // ===========================================================================
+  // OVERLAY BORDERS  (base.ts: semantic.colorScheme.light.overlay)
+  // ===========================================================================
+  --color-overlay-modal-border:    var(--color-surface-0);
+  --color-overlay-select-border:   var(--color-surface-0);
+  --color-overlay-popover-border:  var(--color-surface-200);
+
+  // ===========================================================================
+  // CONTENT  (base.ts: semantic.colorScheme.light.content)
+  // ===========================================================================
+  --color-content:           var(--color-text);
+  --color-content-bg:        var(--color-surface-0);
+  --color-content-hover:     var(--color-text-hover);
+  --color-content-hover-bg:  var(--color-surface-75);
+  --color-content-border:    var(--color-black-alpha-100);
+
+  // ===========================================================================
+  // PRIMARY INTERACTIVE  (base.ts: semantic.colorScheme.light.primary)
+  // ===========================================================================
+  --color-primary-interactive:           var(--color-primary-500);  // {primary.500}
+  --color-primary-interactive-hover:     var(--color-primary-700);  // {primary.700}
+  --color-primary-interactive-active:    var(--color-primary-800);  // {primary.800}
+  --color-primary-interactive-contrast:  var(--color-surface-0);    // {surface.0}
+
+  // ===========================================================================
+  // FORM FIELD  (base.ts: semantic.colorScheme.light.formField)
+  // ===========================================================================
+  --color-form-text:                 var(--color-surface-900);
+  --color-form-bg:                   var(--color-surface-0);
+  --color-form-border:               var(--color-black-alpha-200);
+  --color-form-border-hover:         var(--color-black-alpha-400);
+  --color-form-border-focus:         var(--color-primary-interactive);
+  --color-form-border-invalid:       var(--color-red-500);
+  --color-form-icon:                 var(--color-surface-500);
+  --color-form-placeholder:          var(--color-surface-500);
+  --color-form-disabled-text:        var(--color-surface-500);
+  --color-form-disabled-bg:          var(--color-surface-100);
+  --color-form-filled-bg:            var(--color-surface-50);
+  --color-form-float-label:          var(--color-surface-500);
+  --color-form-float-label-focus:    var(--color-primary-600);
+  --color-form-float-label-active:   var(--color-surface-500);
+  --color-form-float-label-invalid:  var(--color-red-600);
+  --color-form-invalid-placeholder:  var(--color-red-600);
+
+  // ===========================================================================
+  // MASK  (base.ts: semantic.colorScheme.light.mask)
+  // ===========================================================================
+  --color-mask:     var(--color-surface-200);
+  --color-mask-bg:  var(--color-black-alpha-50);
+
+  // ===========================================================================
+  // NAVIGATION  (base.ts: semantic.colorScheme.light.navigation)
+  // ===========================================================================
+  --color-nav-item:              var(--color-text);
+  --color-nav-item-focus:        var(--color-text-hover);
+  --color-nav-item-active:       var(--color-text-hover);
+  --color-nav-item-focus-bg:     var(--color-surface-100);
+  --color-nav-item-active-bg:    var(--color-surface-100);
+  --color-nav-item-icon:         var(--color-surface-400);
+  --color-nav-item-icon-focus:   var(--color-surface-500);
+  --color-nav-item-icon-active:  var(--color-surface-500);
+  --color-nav-submenu-icon:      var(--color-surface-400);
+  --color-nav-submenu-label:     var(--color-text-muted);
+
+  // ===========================================================================
+  // EMUTNAV  (extend.ts: emutnav — Solidaris custom navigation)
+  // ===========================================================================
+  --color-emutnav-item:             var(--color-black-alpha-700);
+  --color-emutnav-item-icon:        var(--color-black-alpha-400);
+  --color-emutnav-item-focus:       var(--color-rose-700);
+  --color-emutnav-item-focus-bg:    var(--color-rose-50);
+  --color-emutnav-item-icon-focus:  var(--color-rose-700);
+
+}

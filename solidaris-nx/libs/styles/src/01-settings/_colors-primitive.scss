@@ -1,0 +1,317 @@
+// =============================================================================
+// 01-settings/_primitive-colors.scss
+// Plectrum primitive color palette — mirrors libs/plectrum/src/Plectrum_v0.6/base.ts
+// Extended tints — mirrors libs/plectrum/src/Plectrum_v0.6/extend.ts
+// Source of truth: Figma Foundations (jH0paYnBCco2Ye6ysNcWrr) + Plectrum preset
+//
+// RULES:
+//   - These are primitive tokens. Never use them directly in components.
+//   - Always reference semantic tokens defined in _tokens.scss instead.
+//   - At runtime, prefer CSS custom properties emitted by providePlectrum().
+//   - Extend here when a new primitive shade is added to the Plectrum preset.
+// =============================================================================
+
+:root {
+
+  // ---------------------------------------------------------------------------
+  // Primary — Steel Blue (Solidaris brand)
+  // base.ts: semantic.primary  |  extend.ts: primary.75
+  // ---------------------------------------------------------------------------
+  --color-primary-50:   #f6f8fa;
+  --color-primary-75:   #EDF1F4;
+  --color-primary-100:  #d5dde5;
+  --color-primary-200:  #b5c2d0;
+  --color-primary-300:  #94a7bb;
+  --color-primary-400:  #738ca6;
+  --color-primary-500:  #527191;
+  --color-primary-600:  #46607b;
+  --color-primary-700:  #394f66;
+  --color-primary-800:  #2d3e50;
+  --color-primary-900:  #212d3a;
+  --color-primary-950:  #151c24;
+
+  // ---------------------------------------------------------------------------
+  // Red — error & danger  (base.ts: primitive.red)
+  // ---------------------------------------------------------------------------
+  --color-red-50:   #fef4f3;
+  --color-red-75:   #FEE9E7;
+  --color-red-100:  #fcc9c5;
+  --color-red-200:  #f99f97;
+  --color-red-300:  #f77569;
+  --color-red-400:  #f44a3b;
+  --color-red-500:  #f2200d;
+  --color-red-600:  #ce1b0b;
+  --color-red-700:  #a91609;
+  --color-red-800:  #851207;
+  --color-red-900:  #610d05;
+  --color-red-950:  #3d0803;
+
+  // ---------------------------------------------------------------------------
+  // Rose  (base.ts: primitive.rose)
+  // ---------------------------------------------------------------------------
+  --color-rose-50:   #fdf2f5;
+  --color-rose-100:  #f6c2cd;
+  --color-rose-200:  #ef91a6;
+  --color-rose-300:  #e8617e;
+  --color-rose-400:  #e13057;
+  --color-rose-500:  #da002f;
+  --color-rose-600:  #b90028;
+  --color-rose-700:  #990021;
+  --color-rose-800:  #78001a;
+  --color-rose-900:  #570013;
+  --color-rose-950:  #37000c;
+
+  // ---------------------------------------------------------------------------
+  // Pink  (base.ts: primitive.pink)
+  // ---------------------------------------------------------------------------
+  --color-pink-50:   #fdf5f7;
+  --color-pink-100:  #f6ceda;
+  --color-pink-200:  #efa7bd;
+  --color-pink-300:  #e781a0;
+  --color-pink-400:  #e05a82;
+  --color-pink-500:  #d93365;
+  --color-pink-600:  #b82b56;
+  --color-pink-700:  #982447;
+  --color-pink-800:  #771c38;
+  --color-pink-900:  #571428;
+  --color-pink-950:  #360d19;
+
+  // ---------------------------------------------------------------------------
+  // Blue — informational & interactive  (base.ts: primitive.blue  |  extend.ts: blue.75)
+  // ---------------------------------------------------------------------------
+  --color-blue-50:   #f5f9fe;
+  --color-blue-75:   #E5EDFA;
+  --color-blue-100:  #d0e0fa;
+  --color-blue-200:  #aac8f6;
+  --color-blue-300:  #85aff1;
+  --color-blue-400:  #5f97ed;
+  --color-blue-500:  #3a7ee9;
+  --color-blue-600:  #316bc6;
+  --color-blue-700:  #2958a3;
+  --color-blue-800:  #204580;
+  --color-blue-900:  #17325d;
+  --color-blue-950:  #0f203a;
+
+  // ---------------------------------------------------------------------------
+  // Indigo  (base.ts: primitive.indigo)
+  // ---------------------------------------------------------------------------
+  --color-indigo-50:   #f5f5fc;
+  --color-indigo-100:  #cfcdf2;
+  --color-indigo-200:  #a9a5e8;
+  --color-indigo-300:  #837dde;
+  --color-indigo-400:  #5d56d3;
+  --color-indigo-500:  #372ec9;
+  --color-indigo-600:  #2f27ab;
+  --color-indigo-700:  #27208d;
+  --color-indigo-800:  #1e196f;
+  --color-indigo-900:  #161250;
+  --color-indigo-950:  #0e0c32;
+
+  // ---------------------------------------------------------------------------
+  // Purple  (base.ts: primitive.purple)
+  // ---------------------------------------------------------------------------
+  --color-purple-50:   #f9f5fc;
+  --color-purple-100:  #e3d1ef;
+  --color-purple-200:  #cdace3;
+  --color-purple-300:  #b787d7;
+  --color-purple-400:  #a163ca;
+  --color-purple-500:  #8b3ebe;
+  --color-purple-600:  #7635a2;
+  --color-purple-700:  #612b85;
+  --color-purple-800:  #4c2269;
+  --color-purple-900:  #38194c;
+  --color-purple-950:  #231030;
+
+  // ---------------------------------------------------------------------------
+  // Green — success  (base.ts: primitive.green  |  extend.ts: green.75)
+  // ---------------------------------------------------------------------------
+  --color-green-50:   #f7fdf9;
+  --color-green-75:   #E7F9ED;
+  --color-green-100:  #d7f6e2;
+  --color-green-200:  #b8efcb;
+  --color-green-300:  #98e8b5;
+  --color-green-400:  #79e19e;
+  --color-green-500:  #59da87;
+  --color-green-600:  #4cb973;
+  --color-green-700:  #3e995f;
+  --color-green-800:  #31784a;
+  --color-green-900:  #245736;
+  --color-green-950:  #163722;
+
+  // ---------------------------------------------------------------------------
+  // Teal  (base.ts: primitive.teal)
+  // ---------------------------------------------------------------------------
+  --color-teal-50:   #f7fcfb;
+  --color-teal-100:  #daf2ec;
+  --color-teal-200:  #bde7dd;
+  --color-teal-300:  #a0ddcd;
+  --color-teal-400:  #83d2be;
+  --color-teal-500:  #66c8af;
+  --color-teal-600:  #57aa95;
+  --color-teal-700:  #478c7a;
+  --color-teal-800:  #386e60;
+  --color-teal-900:  #295046;
+  --color-teal-950:  #1a322c;
+
+  // ---------------------------------------------------------------------------
+  // Orange — warning  (base.ts: primitive.orange  |  extend.ts: orange.75)
+  // ---------------------------------------------------------------------------
+  --color-orange-50:   #fefaf3;
+  --color-orange-75:   #FCEFE0;
+  --color-orange-100:  #fce5c5;
+  --color-orange-200:  #f9d197;
+  --color-orange-300:  #f7bc69;
+  --color-orange-400:  #f4a83b;
+  --color-orange-500:  #f2930d;
+  --color-orange-600:  #ce7d0b;
+  --color-orange-700:  #a96709;
+  --color-orange-800:  #855107;
+  --color-orange-900:  #613b05;
+  --color-orange-950:  #3d2503;
+
+  // ---------------------------------------------------------------------------
+  // Yellow  (base.ts: primitive.yellow)
+  // ---------------------------------------------------------------------------
+  --color-yellow-50:   #fffcf2;
+  --color-yellow-100:  #fff3c2;
+  --color-yellow-200:  #ffe991;
+  --color-yellow-300:  #ffdf61;
+  --color-yellow-400:  #ffd630;
+  --color-yellow-500:  #ffcc00;
+  --color-yellow-600:  #d9ad00;
+  --color-yellow-700:  #b38f00;
+  --color-yellow-800:  #8c7000;
+  --color-yellow-900:  #665200;
+  --color-yellow-950:  #403300;
+
+  // ---------------------------------------------------------------------------
+  // Gray / Surface — neutral surfaces & text  (base.ts: primitive.gray)
+  // extend.ts: surface.75 (#EDEDED) added as gray-75
+  // ---------------------------------------------------------------------------
+  --color-gray-0:    #ffffff;
+  --color-gray-50:   #f9f9f9;
+  --color-gray-75:   #EDEDED;
+  --color-gray-100:  #e0e0e0;
+  --color-gray-200:  #c8c8c8;
+  --color-gray-300:  #b0b0b0;
+  --color-gray-400:  #979797;
+  --color-gray-500:  #7f7f7f;
+  --color-gray-600:  #6c6c6c;
+  --color-gray-700:  #595959;
+  --color-gray-800:  #464646;
+  --color-gray-900:  #333333;
+  --color-gray-950:  #202020;
+
+  // Slate — same scale as gray, kept separate for semantic intent (base.ts: primitive.slate)
+  --color-slate-0:    var(--color-gray-0);
+  --color-slate-50:   var(--color-gray-50);
+  --color-slate-100:  var(--color-gray-100);
+  --color-slate-200:  var(--color-gray-200);
+  --color-slate-300:  var(--color-gray-300);
+  --color-slate-400:  var(--color-gray-400);
+  --color-slate-500:  var(--color-gray-500);
+  --color-slate-600:  var(--color-gray-600);
+  --color-slate-700:  var(--color-gray-700);
+  --color-slate-800:  var(--color-gray-800);
+  --color-slate-900:  var(--color-gray-900);
+  --color-slate-950:  var(--color-gray-950);
+
+  // ---------------------------------------------------------------------------
+  // Stone — deep neutrals / black scale  (base.ts: primitive.stone)
+  // ---------------------------------------------------------------------------
+  --color-stone-50:   #f2f2f2;
+  --color-stone-100:  #c2c2c2;
+  --color-stone-200:  #919191;
+  --color-stone-300:  #616161;
+  --color-stone-400:  #303030;
+  --color-stone-500:  #000000;
+  --color-stone-600:  #000000;
+  --color-stone-700:  #000000;
+  --color-stone-800:  #000000;
+  --color-stone-900:  #000000;
+  --color-stone-950:  #000000;
+
+  // ---------------------------------------------------------------------------
+  // Neutral  (base.ts: primitive.neutral)
+  // ---------------------------------------------------------------------------
+  --color-neutral-50:   #fafafa;
+  --color-neutral-100:  #f5f5f5;
+  --color-neutral-200:  #e5e5e5;
+  --color-neutral-300:  #d4d4d4;
+  --color-neutral-400:  #a3a3a3;
+  --color-neutral-500:  #737373;
+  --color-neutral-600:  #525252;
+  --color-neutral-700:  #404040;
+  --color-neutral-800:  #262626;
+  --color-neutral-900:  #171717;
+  --color-neutral-950:  #0a0a0a;
+
+  // ---------------------------------------------------------------------------
+  // Zinc  (base.ts: primitive.zinc)
+  // ---------------------------------------------------------------------------
+  --color-zinc-50:   #fafafa;
+  --color-zinc-100:  #f4f4f5;
+  --color-zinc-200:  #e4e4e7;
+  --color-zinc-300:  #d4d4d8;
+  --color-zinc-400:  #a1a1aa;
+  --color-zinc-500:  #71717a;
+  --color-zinc-600:  #52525b;
+  --color-zinc-700:  #3f3f46;
+  --color-zinc-800:  #27272a;
+  --color-zinc-900:  #18181b;
+  --color-zinc-950:  #09090b;
+
+  // ---------------------------------------------------------------------------
+  // Sky / Cyan / Lime / Amber / Emerald / Fuchsia / Violet
+  // base.ts declares these palettes as white/gray placeholders.
+  // Defined here for completeness; update values when Plectrum assigns real colors.
+  // ---------------------------------------------------------------------------
+  --color-sky-50:   #ffffff; --color-sky-100:  #ffffff; --color-sky-200:  #ffffff;
+  --color-sky-300:  #feffff; --color-sky-400:  #feffff; --color-sky-500:  #feffff;
+  --color-sky-600:  #d8d9d9; --color-sky-700:  #b2b3b3; --color-sky-800:  #8c8c8c;
+  --color-sky-900:  #666666; --color-sky-950:  #404040;
+
+  --color-cyan-50:   #ffffff; --color-cyan-100:  #ffffff; --color-cyan-200:  #ffffff;
+  --color-cyan-300:  #feffff; --color-cyan-400:  #feffff; --color-cyan-500:  #feffff;
+  --color-cyan-600:  #d8d9d9; --color-cyan-700:  #b2b3b3; --color-cyan-800:  #8c8c8c;
+  --color-cyan-900:  #666666; --color-cyan-950:  #404040;
+
+  --color-lime-50:   #ffffff; --color-lime-100:  #ffffff; --color-lime-200:  #ffffff;
+  --color-lime-300:  #feffff; --color-lime-400:  #feffff; --color-lime-500:  #feffff;
+  --color-lime-600:  #d8d9d9; --color-lime-700:  #b2b3b3; --color-lime-800:  #8c8c8c;
+  --color-lime-900:  #666666; --color-lime-950:  #404040;
+
+  --color-amber-50:   #ffffff; --color-amber-100:  #ffffff; --color-amber-200:  #ffffff;
+  --color-amber-300:  #feffff; --color-amber-400:  #feffff; --color-amber-500:  #feffff;
+  --color-amber-600:  #d8d9d9; --color-amber-700:  #b2b3b3; --color-amber-800:  #8c8c8c;
+  --color-amber-900:  #666666; --color-amber-950:  #404040;
+
+  --color-emerald-50:   #ffffff; --color-emerald-100:  #ffffff; --color-emerald-200:  #ffffff;
+  --color-emerald-300:  #feffff; --color-emerald-400:  #feffff; --color-emerald-500:  #feffff;
+  --color-emerald-600:  #d8d9d9; --color-emerald-700:  #b2b3b3; --color-emerald-800:  #8c8c8c;
+  --color-emerald-900:  #666666; --color-emerald-950:  #404040;
+
+  --color-fuchsia-50:   #ffffff; --color-fuchsia-100:  #ffffff; --color-fuchsia-200:  #ffffff;
+  --color-fuchsia-300:  #feffff; --color-fuchsia-400:  #feffff; --color-fuchsia-500:  #feffff;
+  --color-fuchsia-600:  #d8d9d9; --color-fuchsia-700:  #b2b3b3; --color-fuchsia-800:  #8c8c8c;
+  --color-fuchsia-900:  #666666; --color-fuchsia-950:  #404040;
+
+  --color-violet-50:   #ffffff; --color-violet-100:  #ffffff; --color-violet-200:  #ffffff;
+  --color-violet-300:  #feffff; --color-violet-400:  #feffff; --color-violet-500:  #feffff;
+  --color-violet-600:  #d8d9d9; --color-violet-700:  #b2b3b3; --color-violet-800:  #8c8c8c;
+  --color-violet-900:  #666666; --color-violet-950:  #404040;
+
+  // ---------------------------------------------------------------------------
+  // Transparent black — overlays & scrims  (extend.ts: transparant.black)
+  // ---------------------------------------------------------------------------
+  --color-black-alpha-50:   #0000000D;
+  --color-black-alpha-100:  #0000001A;
+  --color-black-alpha-200:  #00000033;
+  --color-black-alpha-300:  #0000004D;
+  --color-black-alpha-400:  #00000066;
+  --color-black-alpha-600:  #00000099;
+  --color-black-alpha-700:  #000000B3;
+
+  --color-white-alpha-40:   #FFFFFF66;
+
+}

@@ -1,0 +1,12 @@
+// =============================================================================
+// 01-settings/_transitions.scss
+// Plectrum transition tokens.
+// Source: libs/plectrum/src/Plectrum_v0.6/base.ts (semantic.transitionDuration, semantic.mask)
+// =============================================================================
+
+:root {
+
+  --transition-duration:       0.2s;   // semantic.transitionDuration
+  --transition-duration-mask:  0.15s;  // semantic.mask.transitionDuration
+
+}

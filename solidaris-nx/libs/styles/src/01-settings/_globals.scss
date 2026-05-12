@@ -1,0 +1,13 @@
+// =============================================================================
+// 01-settings/_globals.scss
+// Plectrum global design tokens — miscellaneous cross-cutting values.
+// Source: libs/plectrum/src/Plectrum_v0.6/base.ts (semantic)
+// =============================================================================
+
+:root {
+
+  --disabled-opacity:  0.6;   // semantic.disabledOpacity
+  --icon-size:         1rem;  // semantic.iconSize
+  --anchor-gutter:     2px;   // semantic.anchorGutter
+
+}

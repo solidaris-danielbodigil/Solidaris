@@ -1,0 +1,77 @@
+// =============================================================================
+// 01-settings/_spacing.scss
+// Plectrum Spacing — mirrors Figma Foundations: Spacing collection (12 vars)
+// Source: https://www.figma.com/design/jH0paYnBCco2Ye6ysNcWrr/PLECTRUM-·-Foundations
+//         libs/plectrum/src/Plectrum_v0.6/base.ts (semantic.formField, .list, .navigation, .overlay)
+//         libs/plectrum/src/Plectrum_v0.6/extend.ts (emutnav)
+//
+// RULES:
+//   - Base unit: 4px — but Plectrum uses 1rem = 14px, so values are rem-based
+//   - Always use these tokens — never hardcode spacing values
+// =============================================================================
+
+:root {
+
+  // ===========================================================================
+  // SPACING SCALE  (Figma: Spacing/*)
+  // 12 stops: 0 → 24
+  // ===========================================================================
+  --spacing-0:   0;          // 0px
+  --spacing-1:   0.25rem;    //  4px
+  --spacing-2:   0.5rem;     //  7px  (base unit)
+  --spacing-3:   0.75rem;    // 10.5px
+  --spacing-4:   1rem;       // 14px
+  --spacing-5:   1.25rem;    // 17.5px
+  --spacing-6:   1.5rem;     // 21px
+  --spacing-8:   2rem;       // 28px
+  --spacing-10:  2.5rem;     // 35px
+  --spacing-12:  3rem;       // 42px
+  --spacing-16:  4rem;       // 56px
+  --spacing-20:  5rem;       // 70px
+  --spacing-24:  6rem;       // 84px
+
+  // ===========================================================================
+  // SEMANTIC SPACING — Form field  (base.ts: semantic.formField)
+  // ===========================================================================
+  --spacing-form-x:     0.75rem;   // default paddingX
+  --spacing-form-y:     0.5rem;    // default paddingY
+  --spacing-form-x-sm:  0.625rem;  // sm paddingX
+  --spacing-form-y-sm:  0.375rem;  // sm paddingY
+  --spacing-form-x-lg:  0.875rem;  // lg paddingX
+  --spacing-form-y-lg:  0.625rem;  // lg paddingY
+
+  // ===========================================================================
+  // SEMANTIC SPACING — List  (base.ts: semantic.list)
+  // ===========================================================================
+  --spacing-list-padding:        0.25rem 0.25rem;
+  --spacing-list-option:         0.5rem 0.75rem;
+  --spacing-list-header:         0.5rem 1rem 0.25rem 1rem;
+  --spacing-list-gap:            2px;
+  --spacing-list-option-group:   0.5rem 0.75rem;
+
+  // ===========================================================================
+  // SEMANTIC SPACING — Navigation  (base.ts: semantic.navigation)
+  // ===========================================================================
+  --spacing-nav-item:      0.5rem 0.75rem;
+  --spacing-nav-list:      0.25rem 0.25rem;
+  --spacing-nav-list-gap:  2px;
+  --spacing-nav-item-gap:  0.5rem;
+
+  // ===========================================================================
+  // SEMANTIC SPACING — Overlay  (base.ts: semantic.overlay)
+  // ===========================================================================
+  --spacing-overlay-modal:    1.25rem;
+  --spacing-overlay-popover:  0.75rem;
+
+  // ===========================================================================
+  // SEMANTIC SPACING — Emutnav  (extend.ts: emutnav)
+  // Solidaris custom navigation component
+  // ===========================================================================
+  --spacing-emutnav-item-pad-top:    1.143rem;
+  --spacing-emutnav-item-pad-left:   1.429rem;
+  --spacing-emutnav-item-pad-right:  0.857rem;
+  --spacing-emutnav-item-gap:        1.143rem;
+  --spacing-emutnav-list-gap:        0.571rem;
+  --spacing-emutnav-list-padding:    1.714rem;
+
+}

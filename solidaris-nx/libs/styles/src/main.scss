@@ -1,11 +1,30 @@
-@import '01-settings/_variables';
-@import '01-settings/_colors';
-@import '01-settings/_tokens';
+@import '01-settings/_colors-primitive';      // Figma: Color — palette primitives
+@import '01-settings/_typography-primitive';  // Figma: Typography — families, sizes, weights, line-heights
+@import '01-settings/_spacing';               // Figma: Spacing collection
+@import '01-settings/_radius';                // Figma: Radius collection
+@import '01-settings/_colors-semantic';       // Semantic color role mappings  (refs _primitive-colors)
+@import '01-settings/_typography-semantic';   // Semantic type scale            (refs _primitive-typography)
+@import '01-settings/_shadows';               // Box-shadow tokens
+@import '01-settings/_transitions';           // Transition-duration tokens
+@import '01-settings/_focus';                 // Focus ring tokens
+@import '01-settings/_globals';               // Misc globals (opacity, icon size, gutter)
+
+// 02-tools
 @import '02-tools/_mixins';
 @import '02-tools/_functions';
+
+// 03-generic
 @import '03-generic/_reset';
+
+// 04-elements
 @import '04-elements/_typography';
 @import '04-elements/_links';
+
+// 05-objects
 @import '05-objects/_layout';
+
+// 06-components
 @import '06-components/_index';
+
+// 07-utilities
 @import '07-utilities/_utilities';
