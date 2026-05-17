@@ -1,26 +1,24 @@
+@use 'prefix' as *;
+
 // =============================================================================
 // 01-settings/_radius.scss
-// Plectrum Radius — mirrors Figma Foundations: Radius collection (8 vars)
-// Source: https://www.figma.com/design/jH0paYnBCco2Ye6ysNcWrr/PLECTRUM-·-Foundations
+// Border radius tokens — Figma Foundations: Radius collection (8 stops).
+// Source: Figma Foundations — jH0paYnBCco2Ye6ysNcWrr — Radius collection
 //         libs/plectrum/src/Plectrum_v0.6/base.ts (primitive.borderRadius)
 //
 // RULES:
-//   - Always use these tokens — never hardcode border-radius values
+//   - Never hardcode border-radius values in components.
 // =============================================================================
 
 :root {
 
-  // ===========================================================================
-  // RADIUS SCALE  (Figma: Radius/*)
-  // 8 stops: none → pill
-  // ===========================================================================
-  --border-radius-none:  0;      // Figma: Radius/none
-  --border-radius-xs:    2px;    // Figma: Radius/xs   — base.ts: borderRadius.xs
-  --border-radius-sm:    4px;    // Figma: Radius/sm   — base.ts: borderRadius.sm
-  --border-radius-md:    8px;    // Figma: Radius/md   — base.ts: borderRadius.md  (default)
-  --border-radius-lg:    10px;   // Figma: Radius/lg   — base.ts: borderRadius.lg
-  --border-radius-xl:    12px;   // Figma: Radius/xl   — base.ts: borderRadius.xl
-  --border-radius-2xl:   16px;   // Figma: Radius/2xl
-  --border-radius-pill:  2rem;   // Figma: Radius/pill — fully rounded buttons/badges
+  --#{$sds-prefix}-radius-none:  0;
+  --#{$sds-prefix}-radius-xs:    2px;
+  --#{$sds-prefix}-radius-sm:    4px;
+  --#{$sds-prefix}-radius-md:    8px;
+  --#{$sds-prefix}-radius-lg:    10px;
+  --#{$sds-prefix}-radius-xl:    12px;
+  --#{$sds-prefix}-radius-2xl:   16px;
+  --#{$sds-prefix}-radius-pill:  9999px;
 
 }

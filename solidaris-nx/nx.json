@@ -16,7 +16,8 @@
     "@nrwl/angular:component": {
       "style": "scss",
       "pascalCaseFiles": true
-    }
+    },
+    "solidaris-nx:sds-component": {}
   },
   "defaultProject": "ishare"
 }

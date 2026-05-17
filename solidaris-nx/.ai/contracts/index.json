@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "generated": "2026-05-13T17:00:43.033Z",
+    "framework": "angular",
+    "componentLibrary": "primeng",
+    "designSystem": "plectrum",
+    "prefix": "sds",
+    "baseRemPx": 14
+  },
+  "workspace": {
+    "apps": [
+      {
+        "name": "ishare",
+        "path": "apps/ishare"
+      },
+      {
+        "name": "icrm",
+        "path": "apps/icrm"
+      }
+    ],
+    "libs": [
+      {
+        "name": "ui",
+        "path": "libs/ui",
+        "purpose": "Shared Angular components (SSOT)"
+      },
+      {
+        "name": "styles",
+        "path": "libs/styles",
+        "purpose": "SCSS/ITCSS tokens and utilities (SSOT)"
+      },
+      {
+        "name": "plectrum",
+        "path": "libs/plectrum",
+        "purpose": "PrimeNG theme preset integration"
+      }
+    ]
+  },
+  "tokenArchitecture": {
+    "prefix": "--sds-*",
+    "prefixConfig": "libs/styles/src/01-settings/_prefix.scss",
+    "layers": {
+      "primitive": {
+        "files": [
+          "libs/styles/src/01-settings/_colors-primitive.scss",
+          "libs/styles/src/01-settings/_typography-primitive.scss"
+        ],
+        "pattern": "--sds-{category}-{palette}-{shade}"
+      },
+      "semantic": {
+        "files": [
+          "libs/styles/src/01-settings/_colors-semantic.scss",
+          "libs/styles/src/01-settings/_typography-semantic.scss",
+          "libs/styles/src/01-settings/_spacing.scss",
+          "libs/styles/src/01-settings/_radius.scss",
+          "libs/styles/src/01-settings/_shadows.scss",
+          "libs/styles/src/01-settings/_transitions.scss",
+          "libs/styles/src/01-settings/_focus.scss",
+          "libs/styles/src/01-settings/_globals.scss"
+        ],
+        "pattern": "--sds-{category}-{role}"
+      },
+      "component": {
+        "files": [
+          "libs/styles/src/06-components/*.scss"
+        ],
+        "pattern": "--p-{component}-{property} mapped from --sds-*"
+      }
+    }
+  },
+  "components": {},
+  "relationships": {},
+  "summary": {
+    "totalComponents": 0,
+    "componentsWithMetadata": 0,
+    "relationshipsMapped": 0,
+    "tokenFiles": 11,
+    "primeNgMappings": 0
+  }
+}

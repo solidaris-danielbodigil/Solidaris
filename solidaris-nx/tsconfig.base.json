@@ -16,12 +16,14 @@
     "paths": {
       "@solidaris/plectrum": ["libs/plectrum/src/index.ts"],
       "@solidaris/ui": ["libs/ui/src/index.ts"],
-      "@solidaris/styles": ["libs/styles/src/main.scss"]
+      "@solidaris/styles": ["libs/styles/src/main.scss"],
+      "@solidaris/contracts": [".ai/contracts/schema/index.ts"]
     }
   },
   "include": [
     "apps/**/*",
-    "libs/**/*"
+    "libs/**/*",
+    ".ai/**/*"
   ],
   "exclude": [
     "node_modules",

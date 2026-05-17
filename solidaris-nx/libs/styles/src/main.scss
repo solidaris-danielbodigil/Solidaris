@@ -1,30 +1,36 @@
-@import '01-settings/_colors-primitive';      // Figma: Color — palette primitives
-@import '01-settings/_typography-primitive';  // Figma: Typography — families, sizes, weights, line-heights
-@import '01-settings/_spacing';               // Figma: Spacing collection
-@import '01-settings/_radius';                // Figma: Radius collection
-@import '01-settings/_colors-semantic';       // Semantic color role mappings  (refs _primitive-colors)
-@import '01-settings/_typography-semantic';   // Semantic type scale            (refs _primitive-typography)
-@import '01-settings/_shadows';               // Box-shadow tokens
-@import '01-settings/_transitions';           // Transition-duration tokens
-@import '01-settings/_focus';                 // Focus ring tokens
-@import '01-settings/_globals';               // Misc globals (opacity, icon size, gutter)
+// =============================================================================
+// libs/styles/src/main.scss
+// ITCSS entry point — import order defines the cascade.
+// =============================================================================
 
-// 02-tools
-@import '02-tools/_mixins';
-@import '02-tools/_functions';
+// 01 — Settings (design tokens, CSS custom properties)
+@use '01-settings/prefix';                    // $sds-prefix — must be first
+@use '01-settings/primitive-colors';
+@use '01-settings/primitive-typography';
+@use '01-settings/spacing';
+@use '01-settings/radius';
+@use '01-settings/semantic-colors';           // depends on primitive-colors
+@use '01-settings/semantic-typography';       // depends on primitive-typography
+@use '01-settings/shadows';
+@use '01-settings/transitions';
+@use '01-settings/focus';                     // depends on primitive-colors
+@use '01-settings/globals';
 
-// 03-generic
-@import '03-generic/_reset';
+// 02 — Tools (mixins, functions — no CSS output)
+@use '02-tools/mixins';
+@use '02-tools/functions';
 
-// 04-elements
-@import '04-elements/_typography';
-@import '04-elements/_links';
+// 03 — Generic (reset, normalize)
+@use '03-generic/reset';
 
-// 05-objects
-@import '05-objects/_layout';
+// 04 — Elements (bare HTML element defaults)
+@use '04-elements/typography';
+@use '04-elements/links';
 
-// 06-components
-@import '06-components/_index';
+// 05 — Objects (layout patterns, prefix: o-)
+@use '05-objects/layout';
 
-// 07-utilities
-@import '07-utilities/_utilities';
+// 06 — Components (BEM components + PrimeNG wrappers, prefix: c-)
+
+// 07 — Utilities (single-purpose helpers, prefix: u-)
+@use '07-utilities/utilities';
